@@ -1,0 +1,165 @@
+\documentclass{article}
+\usepackage{arxiv}
+
+%\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{indentfirst}
+%\usepackage{lipsum}		% Can be removed after putting your text content
+\usepackage{graphicx}
+\usepackage{natbib}
+\usepackage{doi}
+\usepackage{array}
+\usepackage{algorithm}  
+\usepackage{algorithmic}
+\usepackage{subfigure}
+\renewcommand{\algorithmicrequire}{\textbf{Input:}} % Use Input in the format of Algorithm
+\renewcommand{\algorithmicensure}{\textbf{Output:}} % Use Output in the format of Algorithm
+
+\setlength{\parindent}{1em}
+
+\title{Mid-air Collision Avoidance Based on Deep Distributed Multi-Agent Reinforcement Learning}
+
+%\date{September 9, 1985}	% Here you can change the date presented in the paper title
+%\date{} 					% Or removing it
+
+\author{ \href{https://orcid.org/0000-0001-7508-7567}{\includegraphics[scale=0.06]{orcid.pdf}\hspace{1mm}Weilin Cai}\\
+%\thanks{Use footnote for providing further
+%		information about author (webpage, alternative
+%		address)---\emph{not} for acknowledging funding agencies.} \\
+	School of Science and Engineering\\
+	The Chinese University of Hong Kong\\
+	Shenzhen, Guangdong 518172 \\
+	\texttt{weilincai@link.cuhk.edu.cn} \\
+	%% examples of more authors
+	\And
+	\href{https://orcid.org/0000-0001-9936-4899}{\includegraphics[scale=0.06]{orcid.pdf}\hspace{1mm}Chi Li} \\
+	School of Science and Engineering\\
+	The Chinese University of Hong Kong\\
+	Shenzhen, Guangdong 518172 \\
+	\texttt{chili@link.cuhk.edu.cn} \\
+	%% \AND
+	%% Coauthor \\
+	%% Affiliation \\
+	%% Address \\
+	%% \texttt{email} \\
+	%% \And
+	%% Coauthor \\
+	%% Affiliation \\
+	%% Address \\
+	%% \texttt{email} \\
+	%% \And
+	%% Coauthor \\
+	%% Affiliation \\
+	%% Address \\
+	%% \texttt{email} \\
+}
+
+% Uncomment to remove the date
+%\date{}
+
+% Uncomment to override  the `A preprint' in the header
+\renewcommand{\headeright}{Final Project Report}
+\renewcommand{\undertitle}{Final Project of DDA6105/CIE6023 Reinforcement Learning}
+\renewcommand{\shorttitle}{MACA Based on D2MARL}
+
+%%% Add PDF metadata to help others organize their library
+%%% Once the PDF is generated, you can check the metadata with
+%%% $ pdfinfo template.pdf
+\hypersetup{
+pdftitle={A template for the arxiv style},
+pdfsubject={q-bio.NC, q-bio.QM},
+pdfauthor={David S.~Hippocampus, Elias D.~Striatum},
+pdfkeywords={First keyword, Second keyword, More},
+}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+	A mid-air collision is an accident where two aircraft come into contact with each other while both are in flight, which could result in a disaster. To avoid such casualties, effective air traffic control, which is generally recognized as a real-time and safety-critical decision-making process in periodic flight phases, becomes a necessity. With the fast-growing air traffic density and complexity in traditional controlled airspace, an autonomous air traffic system is needed as the ultimate tool to accommodate and handle stochastic, dense and dynamic operational scenarios, and to provide tactical and practical strategies for air traffic controllers. In our work, we avoid mid-air collision by control the velocity, considering both the speed and the direction, to maintain safe separation. We propose a deep multi-agent reinforcement learning framework to perform aircraft conflicts detection and resolution in designated en-route sector with multiple intersections and emerging points. Our proposed framework applies a policy-based learning method, Proximal Policy Optimization (PPO) to help stabilize the converged process. We plan to use the BlueSky application as the simulation environment to train and evaluate our model.
+\end{abstract}
+
+
+% keywords can be removed
+\keywords{Mid-air collision avoidance \and Air traffic control \and Multi-agent reinforcement learning}
+
+\input{sections/introduction.tex}
+\input{sections/background.tex}
+\input{sections/approach.tex}
+\input{sections/experiment_result.tex}
+%\input{sections/result_analysis.tex}
+\input{sections/conclusion}
+\input{sections/algorithm.tex}
+
+\bibliographystyle{unsrtnat}
+\bibliography{references}  %%% Uncomment this line and comment out the ``thebibliography'' section below to use the external .bib file (using bibtex) .
+
+
+%%% Uncomment this section and comment out the \bibliography{references} line above to use inline references.
+% \begin{thebibliography}{1}
+
+% 	\bibitem{kour2014real}
+% 	George Kour and Raid Saabne.
+% 	\newblock Real-time segmentation of on-line handwritten arabic script.
+% 	\newblock In {\em Frontiers in Handwriting Recognition (ICFHR), 2014 14th
+% 			International Conference on}, pages 417--422. IEEE, 2014.
+
+% 	\bibitem{kour2014fast}
+% 	George Kour and Raid Saabne.
+% 	\newblock Fast classification of handwritten on-line arabic characters.
+% 	\newblock In {\em Soft Computing and Pattern Recognition (SoCPaR), 2014 6th
+% 			International Conference of}, pages 312--318. IEEE, 2014.
+
+% 	\bibitem{hadash2018estimate}
+% 	Guy Hadash, Einat Kermany, Boaz Carmeli, Ofer Lavi, George Kour, and Alon
+% 	Jacovi.
+% 	\newblock Estimate and replace: A novel approach to integrating deep neural
+% 	networks with existing applications.
+% 	\newblock {\em arXiv preprint arXiv:1804.09028}, 2018.
+
+% \end{thebibliography}
+
+\appendix
+
+% \section{Project Progress Structure Explanation}
+
+% The relationship between the outline and our report is shown on figure \ref{fig:mapping}. Here we note that the scenario and goals are not fully intruduced in only one paragragh, while the details of our implementation plan and schedule could be viewed from the table attached in the appendix. The implementation plan might change during the process of our work, judging from our actual progress.
+
+% \begin{figure*}[htbp]
+% \centering
+% \includegraphics[scale=0.45]{images/mapping.pdf}
+% \caption{The relationship between the outline of the proposal and the actual proposal structure}
+% \label{fig:mapping}
+% \end{figure*}
+
+\section{Schedule and Contribution}
+Our project progression and specific assignment arrangement is showed as Table 1. For the project report, Weilin Cai is mainly responsible for introduction, modeling, experiment setting, experiment result while Chi Li is mainly responsible for background, modeling, algorithm and conclusion.
+\begin{table}[htbp]
+	\caption{Implementation Plan and Schedule}
+	\centering
+	\begin{tabular}{|p{.1\linewidth} < {\centering}| p{.4\linewidth} < {\centering} | p{.4\linewidth} < {\centering} |}
+	\hline
+			   & \textbf{Weilin Cai} & \textbf{Chi Li} \\ \hline
+		Week 1 & Study the usage of Tensorflow \& BlueSky & Gather domain knowledge \\ \hline
+		Week 2 & \multicolumn{2}{c|}{Accomplish D2MARL modeling via Reinforcement Learning}													\\ \hline
+		Week 3 & \multicolumn{2}{c|}{Start the basic experiment where the action can be speed-changes only}                                                                                  \\ \hline
+		Week 4 & Organize and summarize experimental results & Finish the midterm project progress report                                 \\ \hline
+		Week 5 & \multicolumn{2}{c|}{Action space with direction change}                                                                                        \\ \hline
+		Week 6 &  Action space with velocity                                    &  State Feature Extraction                                 \\ \hline
+		Week 7 & PPO convergence rate test  & Analyze the Convergence Result                                                    \\ \hline
+		Week 8 & \multicolumn{2}{c|}{Finish the final research report and poster}    \\ \hline              
+ \end{tabular}
+
+\end{table}
+
+\section{The Repostitory of This Project}
+
+We put the resoures of our project on \emph{Github}. You can visit \href{https://github.com/WhiskyChoy/rl-project.git}{https://github.com/WhiskyChoy/rl-project.git} to check our project. Files like the proposal and the midterm report are inside the \verb|Documents| directory. Source codes are stored in the \verb|Codes| directory and you can run the program following the instruction of the \verb|readme.md| file.
+
+\end{document}
